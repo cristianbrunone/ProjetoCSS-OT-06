@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #111111, #222222);
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  margin: 0; /* Elimina cualquier margen predeterminado del cuerpo */
+  padding: 0;
+}
+
+header {
+  height: 55px;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  color: rgba(255, 255, 255, 0.9); 
+  padding: 10px;
+  top: 1px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  z-index: 100; /* Asegurarse de que el encabezado esté por encima del contenido */
+}
+
+
+
+/*------------------Cards-----------------------------*/
+
+.links-uteis {
+  list-style: none;
+  text-align: left;
+  padding: 10px 0px ;
+}
+
+.links-uteis li {
+  font-size: 13px;
+  margin-bottom: 5px;
+
+}
+
+.links-uteis a:link, .links-uteis a:visited {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.links-uteis a:hover {
+  text-decoration: underline;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 20px;
+  transform: translateZ(20px);
+  text-align: left;
+}
+
+.card-text p {
+  color: #cccccc;
+  font-size:13px;
+  font-weight: 300;
+  text-align: left;
+  padding: 5px 0px;
+}
+.card-text h2 {
+  margin-top:0px;
+  font-size:24px;
+}
+
+
+.card {
+  display: grid;
+  grid-template-columns: 250px; /* Reducir el ancho */
+  grid-template-rows: 180px 220px 20px; /* Reducir la altura */
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 15px; /* Ajustar el radio de borde */
+  background: linear-gradient(135deg, #111111, #222222);
+  color:white;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.9); /* Reducir la sombra */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: justify;
+  cursor: pointer;
+  margin:20px; /* Reducir el margen */
+  transform-style: preserve-3d;
+  transform: perspective(800px); /* Ajustar la perspectiva */
+}
+
+
+.cardPrincipal{
+  display: grid;
+  grid-template-columns: 250px; /* Reducir el ancho */
+  grid-template-rows: 180px 220px 20px; /* Reducir la altura */
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 15px; /* Ajustar el radio de borde */
+  background: linear-gradient(135deg, #111111, #222222);
+  color:white;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.9); /* Reducir la sombra */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: justify;
+  cursor: pointer;
+  margin:20px; /* Reducir el margen */
+  transform-style: preserve-3d;
+  transform: perspective(800px); /* Ajustar la perspectiva */
+}
+
+.card-imagePrincipal {
+  grid-area: image;
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("img1.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: 250px;
+  background-repeat: no-repeat;
+  
+}
+
+
+.card-image {
+  grid-area: image;
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("img4.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+
+/*card2*/
+.card-image.card2 {
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("img2.jpg");
+  background-size: cover;
+}
+
+
+/*card3*/
+.card-image.card3 {
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url("img3.png");
+  background-size: cover;
+}
+
+.rgb::after {
+  content:"";
+  background: linear-gradient(45deg,
+  #ff0000 0%, 
+  #ff9a00 10%,
+  #d0de21 20%,
+  #4fdc4a 30%, 
+  #3fdad8 40%,
+  #2fc9e2 50%, 
+  #1c7fee 60%, 
+  #5f15f2 70%, 
+  #ba0cf8 80%, 
+  #fb07d9 90%, 
+  #ff0000 100%  )
+  repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+  border-radius: 16px;
+  filter: blur(8px);
+  transform: translateZ(-1px); /*or z-index */
+  animation: rgb 6s linear infinite;
+}
+
+.rgbA::after {
+  content:"";
+  background: linear-gradient(45deg,
+  #ffffff 0%, 
+  #f2f2f2 10%,
+  #e5e5e5 20%,
+  #d8d8d8 30%, 
+  #cccccc 40%,
+  #bfbfbf 50%, 
+  #b3b3b3 60%, 
+  #a6a6a6 70%, 
+  #999999 80%, 
+  #8c8c8c 90%, 
+  #808080 100%  )
+  repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+  border-radius: 16px;
+  filter: blur(8px);
+  transform: translateZ(-1px); /*or z-index */
+  animation: rgb 6s linear infinite;
+}
+
+@keyframes rgbA {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+
+@keyframes rgb {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.js-tilt-glare {
+  border-radius: 18px;
+}
+
+
+@media screen and (min-width: 860px) and (max-width: 1290px) {
+  body {
+    /* Estilos generales del cuerpo en pantallas de 43:3 */
+    font-size: 16px; /* Ejemplo de ajuste de tamaño de fuente */
+  }
+  
+  .cardPrincipal,
+  .card {
+    /* Estilos de las tarjetas en pantallas de 43:3 */
+    grid-template-columns: 215px; /* Reducir el ancho de las tarjetas */
+    grid-template-rows: 145px 200px 15px; /* Reducir la altura */
+    margin: 14px; /* Reducir el margen entre las tarjetas */
+  }
+
+  .links-uteis {
+    list-style: none;
+    text-align: left;
+    padding: 8px 0px ;
+  }
+  
+  .links-uteis li {
+    font-size:10px;
+    margin-bottom: 3px;
+  
+  }
+
+  .card-text p {
+    color: #cccccc;
+    font-size:13px;
+    font-weight: 300;
+    text-align: left;
+    padding: 6px 0px;
+  }
+  
+  
+  
+}
+
+
+/* Footer */
+
+footer {
+  position: absolute;
+  height: 35px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  color: rgba(255, 255, 255, 0.9);
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  z-index: 100; /* Asegurarse de que el pie de página esté por encima del contenido */
+}

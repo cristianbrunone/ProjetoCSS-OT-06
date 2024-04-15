@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- Referencia a jQuery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Referencia a Tilt.js -->
+    <script src="node_modules/tilt.js/dest/tilt.jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <!-- Aquí puedes agregar tu contenido de encabezado -->
+      <h1>BEM-VINDO AO NOSSO SITE!</h1>
+    </header>
+    <div class="cardPrincipal rgbA">
+        <div class="card-imagePrincipal"></div>
+        <div class="card-text">
+          <h2>Projeto prático</h2>
+          <p>Este é um projeto prático onde aplicamos várias propriedades CSS para estilizar nossa página.</p>
+        <p>Explore os links abaixo para aprender mais sobre CSS:</p>
+        <ul class="links-uteis">
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">Documentação CSS na MDN</a></li>
+            <li><a href="https://www.w3schools.com/css/" target="_blank">Tutorial CSS na W3Schools</a></li>
+        </ul>
+        </div>
+      </div>
+    <div class="card rgb" data-tilt data-tilt-scale="1.1">
+      <div class="card-image"></div>
+      <div class="card-text">
+        <h2>Card 1</h2>
+        <p>Este é o primeiro card, com as informações interessantes</p>
+      </div>
+    </div>
+    <div class="card rgb" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+      <div class="card-image card2"></div>
+      <div class="card-text card2">
+        <h2>Card 2</h2>
+        <p>Este é o segundo card, com as informações interessantes</p>
+      </div>
+    </div>
+    <div class="card rgb" data-tilt>
+      <div class="card-image card3"></div>
+      <div class="card-text card3">
+        <h2>Card 3</h2>
+        <p>Este é o terceiro card, com as informações interessantes</p>
+      </div>
+    </div>
+    <footer>
+      <!-- Aquí puedes agregar tu contenido de pie de página -->
+      <p>Feito pelo Cristian - Aluno Horadev</p>
+    </footer>
+    
+    <!-- Inicializa Tilt.js -->
+    <script>
+      $(document).ready(function(){
+        // Selecciona los elementos con la clase 'data-tilt' y aplica el efecto de inclinación
+        $('[data-tilt]').tilt();
+      });
+    </script>
+  </body>
+</html>
